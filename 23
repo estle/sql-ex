@@ -1,0 +1,11 @@
+SELECT maker
+FROM Product a
+INNER JOIN
+PC b ON a.model = b.model
+WHERE speed >= 750
+INTERSECT
+SELECT maker
+FROM Product a
+INNER JOIN
+Laptop c ON a.model = c.model
+WHERE speed >= 750
